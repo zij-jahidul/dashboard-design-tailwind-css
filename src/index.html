@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+      .show {display: block;}
+  </style>
+
+</head>
+<body class="bg-[##313a46] overflow-x-hidden">
+    <div class="flex">
+        <!-- Sidebar Menu -->
+        <div class="w-64 bg-indigo-900 text-white">
+            <div class="bg-indigo-800">
+                <div class="uppercase text-xl font-bold text-gray-200 p-5">
+                <a href="index.html">
+                    <img src="../public/images/logo/logo.png" alt="" class="img-full h-[30px]">
+                </a>
+                </div>
+            </div>
+
+            <div class="text-sx font-bold p-5 uppercase text-gray-200">
+                Navigation
+            </div>
+
+            <div class=" pl-5 pb-2">
+               <a href="index.html" class="flex text-xl">
+                    <div class="pr-3">
+                        <span class="material-icons pt-1">dashboard</span>
+                    </div>
+                    <div>
+                        Dashboard
+                    </div>
+               </a>
+            </div>
+
+            <div class="text-sx font-bold p-5 uppercase text-gray-200">
+                Apps
+            </div>
+
+            <!-- Products Item CRUD -->
+            <div class=" pl-5 pb-4">
+                <a href="javascript:void(0);" class="flex text-xl">
+                     <div class="pr-3">
+                         <span class="material-icons pt-1">category</span>
+                     </div>
+                     <div>
+                         <button onclick="myFunction()" class="dropbtn">Products</button>
+                     </div>
+                     <ul class="list-none pl-5 hidden transition-all" id="myDropdown">
+                        <li>
+                            <a href="add_new.html" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">Add New</a>
+                        </li>
+                        <li>
+                            <a href="data_view.html" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-white">View Data</a>
+                        </li>
+                     </ul>
+                </a>
+             </div>
+             <!-- Product Item CRUD End -->
+
+            <div class=" pl-5 pb-4">
+               <a href="#" class="flex text-xl">
+                <div class="pr-3">
+                    <span class='material-icons pt-1'>people</span>
+                </div>
+                <div>
+                    Customers
+                </div>
+               </a>
+            </div>
+
+            <div class=" pl-5 pb-4">
+              <a href="#" class="flex text-xl">
+                <div class="pr-3">
+                    <span class="material-icons pt-1">credit_card</span>
+                </div>
+                <div>
+                    Orders
+                </div>
+              </a>
+            </div>
+
+
+            <div class=" pl-5 pb-4">
+               <a href="#" class="flex text-xl">
+                    <div class="pr-3">
+                        <span class="material-icons pt-1">star_outline</span>
+                    </div>
+                    <div>
+                        Campaigns
+                    </div>
+               </a>
+            </div>
+
+
+
+            <div class=" pl-5 pb-4">
+               <a href="#" class="flex text-xl">
+                <div class="pr-3">
+                    <span class="material-icons pt-1">message</span>
+                </div>
+                <div>
+                    Messages
+                </div>
+               </a>
+            </div>
+
+
+            <div class=" pl-5 pb-4">
+               <a href="#" class="flex text-xl">
+                <div class="pr-3">
+                    <span class="material-icons pt-1">apps</span>
+                </div>
+                <div>
+                    Apps
+                </div>
+               </a>
+            </div>
+
+            <div class="pl-5 pb-4">
+                <a href="#" class="flex text-xl">
+                    <div class="pr-3">
+                        <span class="material-icons pt-1">settings_applications</span>
+                    </div>
+                    <div>
+                        Settings
+                    </div>
+                </a>
+            </div>
+            <div class=" pl-5 pb-4">
+               <a href="#" class="flex text-xl">
+                <div class="pr-3">
+                    <span class="material-icons pt-1">settings_power</span>
+                </div>
+                <div>
+                    LogOut
+                </div>
+               </a>
+            </div> 
+        </div>
+
+        <!-- Main Container -->
+        <div class="flex-1">
+            <div class="bg-white px-2 h-18 flex justify-between">
+                <div class="left flex justify-center item-center py-3.5">
+                    <span class="material-icons w-7 h-7 mx-5 pt-3 cursor-pointer">menu</span>
+                    <div class="relative">
+                        <span class="absolute top-[2px] left-1">
+                            <span class="material-icons w-7 h-7 mx-3 pt-3 cursor-pointer">search</span>
+                        </span>
+                        <input type="text" class="transition w-full rounded-md p-3 pl-12 bg-gray-100 outline-none outline-1 focus:outline-[#727cf5]-300" placeholder="Search">
+
+                        <span class="absolute right-0">
+                           <button class="py-[12px] px-[20px] bg-[#727cf5] text-white">Search</button>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="right flex">
+                    <div class=" py-3.5">
+                        <span class="material-icons w-7 h-7 mx-3 pt-3 cursor-pointer">notifications</span>
+                        <span class="material-icons w-7 h-7 mx-3 pt-3 cursor-pointer">apps</span>
+                        <span class="material-icons w-7 h-7 mx-3 pt-3 cursor-pointer">settings</span>
+                    </div>
+
+                    <div class="flex border-x-2 border-x-gray-100 px-10 py-3 bg-[#F9FAFC] cursor-pointer ">
+                        <img src="../public/images/person.png" alt="" class="w-10 h-10 rounded-full mr-2 mt-2">
+                        <div class="flex flex-col ">
+                            <h2 class="pl-2 font-medium">Jho Deo</h2> 
+                            <h2 class="pl-2">CEO</h2>
+                        </div>
+
+                    </div>
+
+                   
+                    <!-- <button class="text-indigo-400 font-medium mr-5 pt-2">LogOut</button> -->
+                </div>
+
+            </div> 
+            <!-- Top Navbar -->
+
+           <!-- Breadcrumb -->
+           <div class="bg-[#F9FAFD] p-6 flex items-center justify-between">
+            <div class="flex text-4xl text-gray-800 font-medium">
+              <h4 class="text-gray-600 text-2xl">Dashboard</h4>
+            </div>
+
+            <div class="flex text-gray-800 font-medium text-sm">
+              <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                  <li class="inline-flex items-center">
+                    <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                      <svg class="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <div class="flex items-center">
+                      <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                      <a href="#" class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white">Dashboard</a>
+                    </div>
+                  </li>
+                
+                </ol>
+              </nav>
+          </div>
+          </div>
+
+           <!-- Single Item Start -->
+           <div class="card p-4 w-full bg-[#F3F5F8]">
+
+                <!-- Card Section Right Side -->
+                <div class="flex">
+
+                    <div class="flex flex-wrap">
+                        <!-- Single Item -->
+                        <div class="basis-1/2 py-4 bg-[#FFFFFF] text-[#6f7880]">
+                            <div class="card flex justify-between mx-3 px-2">
+                                <div>
+                                    <h2 class="">Customers</h2>
+                                    <h4 class="text-2xl font-semibold py-3">36,254</h4>
+                                    <p class=""> <span class="text-green-500 mr-3"> +5.27%</span> Since last month </p>
+                                </div>
+                                <div>
+                                    <span class='material-icons p-2 text-[#727cf5] bg-[#DCDEFC] rounded-sm text-xs'>people</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Item End -->
+
+                        
+                        <div class="basis-1/2 py-4 bg-[#FFFFFF] text-[#6f7880]">
+                            <div class="card flex justify-between mx-3 px-2">
+                                <div>
+                                    <h2 class="">Orders</h2>
+                                    <h4 class="text-2xl font-semibold py-3">36,254</h4>
+                                    <p class=""> <span class="text-green-500 mr-3"> +5.27%</span> Since last month </p>
+                                </div>
+                                <div>
+                                    <span class='material-icons p-2 text-[#727cf5] bg-[#DCDEFC] rounded-sm text-xs'>add_shopping_cart</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="basis-1/2 py-4 bg-[#FFFFFF] text-[#6f7880]">
+                            <div class="card flex justify-between mx-3 px-2">
+                                <div>
+                                    <h2 class="">Revenue</h2>
+                                    <h4 class="text-2xl font-semibold py-3">36,254</h4>
+                                    <p class=""> <span class="text-green-500 mr-3"> +5.27%</span> Since last month </p>
+                                </div>
+                                <div>
+                                    <span class='material-icons p-2 text-[#727cf5] bg-[#DCDEFC] rounded-sm text-xs'>attach_money</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="basis-1/2 py-4 bg-[#FFFFFF] text-[#6f7880]">
+                            <div class="card flex justify-between mx-3 px-2">
+                                <div>
+                                    <h2 class="">Growth</h2>
+                                    <h4 class="text-2xl font-semibold py-3">36,254</h4>
+                                    <p class=""> <span class="text-green-500 mr-3"> +5.27%</span> Since last month </p>
+                                </div>
+                                <div>
+                                    <span class='material-icons p-2 text-[#727cf5] bg-[#DCDEFC] rounded-sm text-xs'>monitor_heart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-4 w-1/2 border-gray-100 ">
+                        <div class="ml-2">
+                            <div class="font-bold text-xl text-gray-700">
+                                Projections Vs Actuals
+                            </div>
+                        </div>
+                        <canvas id="chart_one"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Section Right Side -->
+            <div class="m-7 flex gap-5">
+                <!-- Single Item Start -->
+                <div class="card p-4 w-1/2 border-gray-100 ">
+                    <div class="ml-5">
+                        <div class="font-bold text-xl text-gray-700">
+                            Super Plus
+                        </div>
+                    </div>
+                    <canvas id="chart_three"></canvas>
+                    
+                </div>
+                <!-- Single Item End -->
+
+                <div class="card p-4 w-1/2 border-gray-100 ">
+                    <div class="ml-5">
+                    
+                        <div class="font-bold text-xl text-gray-700">
+                            Super Plus
+                        </div>
+                      
+                    </div>
+                    <canvas id="chart_four"></canvas>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ChartJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <script src="../public/js/main.js"></script>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+  
+</body>
+</html>

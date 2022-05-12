@@ -1,0 +1,17 @@
+{
+  "name": "dashboard-1-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dropify": "^0.2.2",
+    "tailwindcss": "^3.0.24"
+  }
+}
